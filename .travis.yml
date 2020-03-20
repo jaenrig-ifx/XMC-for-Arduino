@@ -9,7 +9,7 @@ jobs:
   include:
   
     - stage: develop
-      if: branch = develop
+      if: branch != master
       addons:
         apt:
           packages:
@@ -36,6 +36,12 @@ jobs:
         - sudo /home/travis/arduino-ci/arduino-cli sketch new ci-build
         - for BOARD in ${BOARDS[@]}; do sudo /home/travis/arduino-ci/arduino-cli compile --verbose --fqbn Infineon:arm:$BOARD ci-build; done
         
+        - EXCLUDED_LIBRARIES=(DMA DSP LED I2S USB RTC BGT24LTR11-Pulsed-Doppler-Radar Radar)
+        - echo "Libraries which are excluded for the following build:"
+        - echo ${EXCLUDED_LIBRARIES[@]}
+        - OPTIONS=()
+        - for EXLIB in ${EXCLUDED_LIBRARIES[@]}; do OPTIONS=("${OPTIONS[@]}" '-not' '-path' '/home/travis/.arduino15/packages/Infineon/hardware/arm/*/libraries/'${EXLIB}'/*'); done
+        - for BOARD in ${BOARDS[@]}; do for d in $(find /home/travis/.arduino15/packages/Infineon/hardware/arm/*/libraries/* -name '*.ino' "${OPTIONS[@]}" -printf '%h\n'  | sort -u); do sudo /home/travis/arduino-ci/arduino-cli compile --verbose --fqbn Infineon:arm:$BOARD $d; done; done
       notifications:
         email:
           on_success: change
