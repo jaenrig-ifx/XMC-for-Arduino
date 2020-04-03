@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2011 Arduino.  All right reserved.
+  Copyright (c) 2016 Arduino LLC.  All right reserved.
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -14,23 +14,30 @@
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
-  Copyright (c) 2018 Infineon Technologies AG
-  This file has been modified for the XMC microcontroller series.
 */
-#ifndef _WIRING_TONE_
-#define _WIRING_TONE_
 
-//****************************************************************************
-// @External Prototypes
-//****************************************************************************
-#ifdef __cplusplus
-extern "C"
+#pragma once
+
+#include <inttypes.h>
+#include "Stream.h"
+
+class HardwareI2C : public Stream
 {
-#endif
-extern int  tone_irq_action( int, int16_t );
-#ifdef __cplusplus
-}
-#endif
+  public:
+    virtual void begin() = 0;
+    virtual void begin(uint8_t address) = 0;
+    virtual void end() = 0;
 
-#endif /* _WIRING_TONE_ */
+    virtual void setClock(uint32_t freq) = 0;
+  
+    virtual void beginTransmission(uint8_t address) = 0;
+    virtual uint8_t endTransmission(bool stopBit) = 0;
+    virtual uint8_t endTransmission(void) = 0;
+
+    virtual uint8_t requestFrom(uint8_t address, size_t len, bool stopBit) = 0;
+    virtual uint8_t requestFrom(uint8_t address, size_t len) = 0;
+
+    virtual void onReceive(void(*)(int)) = 0;
+    virtual void onRequest(void(*)(void)) = 0;
+};
+

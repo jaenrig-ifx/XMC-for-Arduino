@@ -166,10 +166,9 @@ void analogReference( uint8_t ulMode )
 analog_reference = ulMode;
 }
 
-
 /* analogRead takes parameter of ADC channel number
         return 0xFFFFFFFF for invalid channel */
-uint32_t analogRead( uint8_t channel )
+int analogRead(pin_size_t channel )
 {
 uint32_t value;
 
@@ -258,15 +257,17 @@ return -1;
                -1 = invalid value
                -2 = wrong pin
 */
-int16_t analogWrite( uint8_t pin, uint16_t value )
+
+
+void analogWrite( pin_size_t pin, int value )
 {
 uint32_t compare_reg = 0;
 int16_t resource;
 int16_t ret = 0;
 
-if( value > _writeMaximum )
-  return -1;
+if( value >=0 && value <=_writeMaximum )
 
+{
 if( ( resource = scan_map_table( mapping_pin_PWM4, pin ) ) >= 0 )
   {
   XMC_PWM4_t *pwm4 = &mapping_pwm4[ resource ];
@@ -343,9 +344,7 @@ else
     XMC_DAC_CH_Write( dac->group, dac->channel, dacValue );
     }
 #endif
-else
-  ret = -2;
-return ret;
+}
 }
 
 

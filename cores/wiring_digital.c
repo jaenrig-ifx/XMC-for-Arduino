@@ -24,8 +24,7 @@
 //****************************************************************************
 #include "Arduino.h"
 
-
-void pinMode( uint8_t pin, uint8_t mode )
+void pinMode(pin_size_t pin, PinMode mode )
 {
 	XMC_GPIO_CONFIG_t gpio_conf;
 	gpio_conf.mode = mode;
@@ -37,17 +36,16 @@ void pinMode( uint8_t pin, uint8_t mode )
 }
 
 
-uint8_t digitalRead( uint8_t pin )
+PinStatus digitalRead(pin_size_t pin)
 {
 	return ( ( pin == GND )
 			? LOW : XMC_GPIO_GetInput( mapping_port_pin[ pin ].port, mapping_port_pin[ pin ].pin ) );
 }
 
-
-void digitalWrite( uint8_t pin, uint8_t value )
+void digitalWrite( pin_size_t pin, PinStatus status )
 {
 	XMC_GPIO_SetOutputLevel( mapping_port_pin[ pin ].port, mapping_port_pin[ pin ].pin,
-			( value == LOW ) ? XMC_GPIO_OUTPUT_LEVEL_LOW : XMC_GPIO_OUTPUT_LEVEL_HIGH );
+			( status == LOW ) ? XMC_GPIO_OUTPUT_LEVEL_LOW : XMC_GPIO_OUTPUT_LEVEL_HIGH );
 }
 
 

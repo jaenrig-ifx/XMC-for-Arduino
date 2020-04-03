@@ -67,7 +67,7 @@ void CCU40_1_IRQHandler(void)
 }
 #endif
 
-void attachInterrupt(uint32_t interrupt_num, interrupt_cb_t callback, uint32_t mode)
+void attachInterrupt(pin_size_t interrupt_num, voidFuncPtr callback, PinStatus mode)
 {
     if (interrupt_num < NUM_INTERRUPT)
     {
@@ -177,7 +177,7 @@ void attachInterrupt(uint32_t interrupt_num, interrupt_cb_t callback, uint32_t m
 	}
 }
 
-void detachInterrupt(uint32_t interrupt_num)
+void detachInterrupt(pin_size_t interrupt_num)
 {
     if (interrupt_num < NUM_INTERRUPT)
     {

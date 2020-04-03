@@ -289,19 +289,11 @@ return data_in;
 */
 uint8_t IFX9201::DutyCycleToanlogWrite( uint8_t duty_cycle )
 {
-uint8_t ret = IFX9201__NO_ERROR;
-int16_t val;
 
 if( duty_cycle > IFX9201__MAX_DUTY_CYCLE )
-  ret = IFX9201__ILLEGAL_DUTY_CYCLE;
-else
-  {
-  val = analogWrite( m_PWM, (uint16_t)( ( (uint32_t)duty_cycle * getAnalogWriteMaximum( ) ) / 100u ) );
-  if( val == -1 )
-    ret = IFX9201__ILLEGAL_DUTY_VALUE;
-  else
-    if( val == -2 )
-      ret = IFX9201__ILLEGAL_PWM_PIN;
-  }
-return ret;
+   return IFX9201__ILLEGAL_DUTY_CYCLE;
+
+  analogWrite( m_PWM, (uint16_t)( ( (uint32_t)duty_cycle * getAnalogWriteMaximum( ) ) / 100u ) );
+  return IFX9201__NO_ERROR ;
+
 }

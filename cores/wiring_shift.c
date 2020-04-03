@@ -24,8 +24,7 @@
 //****************************************************************************
 // @Local Functions
 //****************************************************************************
-
-void shiftOut(uint32_t ulDataPin, uint32_t ulClockPin, uint32_t ulBitOrder, uint32_t ulVal)
+void shiftOut(pin_size_t ulDataPin, pin_size_t ulClockPin, BitOrder ulBitOrder, uint8_t ulVal)
 {
     uint8_t i ;
 
@@ -45,7 +44,7 @@ void shiftOut(uint32_t ulDataPin, uint32_t ulClockPin, uint32_t ulBitOrder, uint
     }
 }
 
-uint32_t shiftIn(uint32_t ulDataPin, uint32_t ulClockPin, uint32_t ulBitOrder)
+pin_size_t shiftIn(pin_size_t ulDataPin, pin_size_t ulClockPin, BitOrder ulBitOrder)
 {
     uint8_t value = 0 ;
     uint8_t i ;

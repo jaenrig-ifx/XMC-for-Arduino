@@ -132,65 +132,6 @@ extern volatile uint32_t g_systick_count;
  */
 extern void wiring_time_init( void );
 
-/*
- * \brief Returns the number of milliseconds since the Arduino board began running the current program.
- *
- * This number will overflow (go back to zero), after approximately 50 days.
- *
- * \return Number of milliseconds since the program started (uint32_t)
- */
-static inline uint32_t  millis( ) __attribute__(( always_inline ));
-static inline uint32_t  millis( )
-{
-return ( g_systick_count );
-}
-
-
-/*
- * \brief Returns the number of microseconds since the Arduino board began running the current program.
- *
- * This number will overflow (go back to zero), after approximately 70 minutes. 
- * On XMC boards the returned value has resolution of 1 microsecond as it is
- * calculated from a hardware timer running counting clock cycles to produce 
- * 1 millisecond interval interrupts.
- *
- * \note There are 1,000 microseconds in a millisecond and 1,000,000 microseconds in a second.
-
-   get micro seconds since power up 
-   Read milli seconds (in microseconds) and convert Systick counter to microseconds to add to it 
-   remember SysTick->VAL counts DOWN to zero */
-static inline uint32_t  micros( ) __attribute__(( always_inline ));
-static inline uint32_t  micros( )
-{
-return ( ( ( SYSTICK_MS - SysTick->VAL ) / SYSTICK_US )
-            + ( g_systick_count * SYSTIMER_TICK_PERIOD_US ) );
-}
-
-
-/*
- * \brief Pauses the program for the amount of time (in milliseconds) specified as parameter.
- * (There are 1000 milliseconds in a second.)
- *
- * \param dwMs the number of milliseconds to pause (uint32_t)
- */
-extern void delay( uint32_t dwMs );
-
-/*
- * \brief Pauses the program for the amount of time (in microseconds) specified as parameter.
- *
- * \param dwUs the number of microseconds to pause (uint32_t)
- */
-static inline void delayMicroseconds( uint32_t ) __attribute__(( always_inline ));
-static inline void delayMicroseconds( uint32_t usec )
-{
-if( usec == 0 )
-  return;
-else
-  do  
-    NOPS_FOR_USEC( )  // NOP loop to generate delay
-  while( --usec );
-}
-
 
 extern int setInterval( int, uint32_t );
 extern uint32_t getInterval( int );

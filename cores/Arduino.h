@@ -240,6 +240,7 @@ extern "C" {
 #include "dtostrf.h"
 #include "WCharacter.h"
 #include "WInterrupts.h"
+#include "api/Common.h"
 
 //****************************************************************************
 // @Infineon Core Includes

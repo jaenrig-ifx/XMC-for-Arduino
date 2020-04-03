@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2011 Arduino.  All right reserved.
+  Copyright (c) 2015 Arduino LCC.  All right reserved.
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -14,23 +14,10 @@
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
-  Copyright (c) 2018 Infineon Technologies AG
-  This file has been modified for the XMC microcontroller series.
 */
-#ifndef _WIRING_TONE_
-#define _WIRING_TONE_
 
-//****************************************************************************
-// @External Prototypes
-//****************************************************************************
-#ifdef __cplusplus
-extern "C"
-{
-#endif
-extern int  tone_irq_action( int, int16_t );
-#ifdef __cplusplus
-}
-#endif
-
-#endif /* _WIRING_TONE_ */
+/*
+  Empty file.
+  This file is here to allow compatibility with sketches (made for AVR)
+  that includes <AVR/interrupt.h>
+*/

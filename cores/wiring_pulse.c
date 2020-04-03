@@ -70,7 +70,8 @@ uint32_t end_time;              // start time of measured pulse
  *  to any operations.
  *  To improve accuracy beyond this will probably need hard coded assembler
  */
-uint32_t pulseIn( uint32_t pin, uint32_t state, uint32_t timeout )
+
+unsigned long pulseIn( pin_size_t pin, uint8_t state, unsigned long timeout )
 {
 // check pin is valid by NUM_DIGITAL_PINS, return 0 if invalid
 #ifdef NUM_DIGITAL_PINS

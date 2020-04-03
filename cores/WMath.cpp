@@ -30,7 +30,7 @@ extern "C" {
 // @Local Functions
 //****************************************************************************
 
-void randomSeed(uint32_t dwSeed)
+void randomSeed(unsigned long dwSeed)
 {
     if (dwSeed != 0)
     {
