@@ -1,6 +1,0 @@
-{
-    "board": "Infineon:arm:XMC1100_XMC2GO",
-    "configuration": "UART=debug",
-    "port": "COM7",
-    "sketch": "libraries\\LED\\examples\\SimpleLED\\SimpleLED.ino"
-}
