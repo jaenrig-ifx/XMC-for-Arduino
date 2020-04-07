@@ -19,6 +19,7 @@
 
 #pragma once
 
+#include "Print.h"
 #include "Stream.h"
 #include "IPAddress.h"
 

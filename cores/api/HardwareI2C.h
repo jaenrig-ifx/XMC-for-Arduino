@@ -19,7 +19,7 @@
 #pragma once
 
 #include <inttypes.h>
-#include "Stream.h"
+#include "api/Stream.h"
 
 class HardwareI2C : public Stream
 {

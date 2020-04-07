@@ -34,7 +34,7 @@
 
 #pragma once
 
-#include "Stream.h"
+#include "api/Stream.h"
 #include "IPAddress.h"
 
 class UDP : public Stream {

@@ -1,5 +1,4 @@
-#include <stdint.h>
-
+#include <stdint.h> 
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -127,7 +126,7 @@ void loop(void);
 } // extern "C"
 #endif
 
-#ifdef __cplusplus
+
 
 /* C++ prototypes */
 uint16_t makeWord(uint16_t w);
@@ -147,4 +146,3 @@ long random(long, long);
 void randomSeed(unsigned long);
 long map(long, long, long, long, long);
 
-#endif // __cplusplus
