@@ -1,5 +1,3 @@
-#ifdef ARM_LIB_CMSIS_NN
-
 /* ----------------------------------------------------------------------
  * Project:      CMSIS NN Library
  * Title:        arm_nn_tables.h
@@ -59,5 +57,3 @@ extern const q15_t sigmoidLTable_q15[128];
 extern const q15_t sigmoidHTable_q15[192];
 
 #endif                          /*  ARM_NN_TABLES_H */
-
-#endif /* ARM_LIB_CMSIS_NN */

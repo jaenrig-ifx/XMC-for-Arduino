@@ -1,5 +1,3 @@
-#ifdef ARM_LIB_CMSIS_NN
-
 /*
  * Copyright (C) 2010-2018 Arm Limited or its affiliates. All rights reserved.
  *
@@ -901,5 +899,3 @@ extern    "C"
 #endif
 
 #endif
-
-#endif /* ARM_LIB_CMSIS_NN */

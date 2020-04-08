@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include "xmc_i2s_conf.h"
 
 XMC_I2S_t i2s_config = {

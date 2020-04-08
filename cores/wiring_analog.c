@@ -166,9 +166,10 @@ void analogReference( uint8_t ulMode )
 analog_reference = ulMode;
 }
 
+
 /* analogRead takes parameter of ADC channel number
         return 0xFFFFFFFF for invalid channel */
-int analogRead(pin_size_t channel )
+int analogRead( pin_size_t channel )
 {
 uint32_t value;
 
@@ -258,16 +259,14 @@ return -1;
                -2 = wrong pin
 */
 
-
 void analogWrite( pin_size_t pin, int value )
 {
+  if(value>=0 && value <=_writeMaximum )
+  {
 uint32_t compare_reg = 0;
 int16_t resource;
 int16_t ret = 0;
 
-if( value >=0 && value <=_writeMaximum )
-
-{
 if( ( resource = scan_map_table( mapping_pin_PWM4, pin ) ) >= 0 )
   {
   XMC_PWM4_t *pwm4 = &mapping_pwm4[ resource ];
@@ -446,7 +445,7 @@ return _readMaximum;
 }
 
 
-/* Get the maximum value for current resolution for analogWrite. 
+/* Get the maximum value for current resolution for analogRite. 
     Default is 255
     Maximum is 65535
  */

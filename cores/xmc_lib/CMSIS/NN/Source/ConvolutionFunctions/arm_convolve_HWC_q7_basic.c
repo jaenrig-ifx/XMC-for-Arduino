@@ -1,5 +1,3 @@
-#ifdef ARM_LIB_CMSIS_NN
-
 /*
  * Copyright (C) 2010-2018 Arm Limited or its affiliates. All rights reserved.
  *
@@ -230,5 +228,3 @@ arm_convolve_HWC_q7_basic(const q7_t * Im_in,
 /**
  * @} end of NNConv group
  */
-
-#endif /* ARM_LIB_CMSIS_NN */

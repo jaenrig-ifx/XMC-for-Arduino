@@ -1,5 +1,3 @@
-#ifdef ARM_LIB_CMSIS_DSP
-
 /* ----------------------------------------------------------------------
  * Project:      CMSIS DSP Library
  * Title:        arm_cfft_f32.c
@@ -620,5 +618,3 @@ void arm_cfft_f32(
 /**
 * @} end of ComplexFFT group
 */
-
-#endif /* ARM_LIB_CMSIS_DSP */

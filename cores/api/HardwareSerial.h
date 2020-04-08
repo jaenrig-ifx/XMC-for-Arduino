@@ -19,7 +19,7 @@
 #pragma once
 
 #include <inttypes.h>
-#include "api/Stream.h"
+#include "Stream.h"
 
 // XXX: Those constants should be defined as const int / enums?
 // XXX: shall we use namespaces too?

@@ -1,5 +1,3 @@
-#ifdef XMC4_SERIES
-
 /*******************************************************************************
  Copyright (c) 2013, Infineon Technologies AG                                 **
  All rights reserved.                                                         **
@@ -306,5 +304,3 @@ uint8_t Endpoint_Null_Stream(uint16_t Length,
 }
 #endif
 #endif
-
-#endif /* UC_FAMILY == XMC4 */

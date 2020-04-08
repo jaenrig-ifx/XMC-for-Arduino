@@ -21,13 +21,11 @@
 #ifndef _WIRING_TONE_
 #define _WIRING_TONE_
 
-//****************************************************************************
-// @External Prototypes
-//****************************************************************************
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
 extern int  tone_irq_action( int, int16_t );
 #ifdef __cplusplus
 }

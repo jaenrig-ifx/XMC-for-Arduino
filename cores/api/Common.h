@@ -1,4 +1,5 @@
-#include <stdint.h> 
+#include <stdint.h>
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -81,10 +82,6 @@ typedef void (*voidFuncPtr)(void);
 #define bit(b) (1UL << (b))
 #endif
 
-/* TODO: request for removal */
-typedef bool      boolean;
-typedef uint8_t   byte;
-typedef uint16_t  word;
 
 void init(void);
 void initVariant(void);
@@ -108,11 +105,10 @@ void analogWrite(pin_size_t pinNumber, int value);
 
 unsigned long millis(void);
 unsigned long micros(void);
-void delay(unsigned long dwMs);
+void delay(unsigned long);
 void delayMicroseconds(unsigned int us);
 unsigned long pulseIn(pin_size_t pin, uint8_t state, unsigned long timeout);
 unsigned long pulseInLong(pin_size_t pin, uint8_t state, unsigned long timeout);
-
 void shiftOut(pin_size_t dataPin, pin_size_t clockPin, BitOrder bitOrder, uint8_t val);
 pin_size_t shiftIn(pin_size_t dataPin, pin_size_t clockPin, BitOrder bitOrder);
 
@@ -126,8 +122,12 @@ void loop(void);
 } // extern "C"
 #endif
 
+#ifdef __cplusplus
 
-
+/* TODO: request for removal */
+typedef bool      boolean;
+typedef uint8_t   byte;
+typedef uint16_t  word;
 /* C++ prototypes */
 uint16_t makeWord(uint16_t w);
 uint16_t makeWord(byte h, byte l);
@@ -146,3 +146,4 @@ long random(long, long);
 void randomSeed(unsigned long);
 long map(long, long, long, long, long);
 
+#endif // __cplusplus

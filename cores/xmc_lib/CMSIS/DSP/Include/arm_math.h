@@ -1,5 +1,3 @@
-#ifdef ARM_LIB_CMSIS_DSP
-
 /******************************************************************************
  * @file     arm_math.h
  * @brief    Public header file for CMSIS DSP LibraryU
@@ -7157,5 +7155,3 @@ void arm_rfft_fast_f32(
  *
  * End of file.
  */
-
-#endif /* ARM_LIB_CMSIS_DSP */

@@ -61,14 +61,14 @@ pinMode( pin, OUTPUT );
 /* Set LED On for specified pin */
 void LED::On( int pin )
 {
-digitalWrite( pin, XMC_LED_ON );
+digitalWrite( pin, HIGH );
 }
 
 
 /* Set LED Off for specified pin */
 void LED::Off( int pin )
 {
-digitalWrite( pin, !XMC_LED_ON );
+digitalWrite( pin, LOW );
 }
 
 

@@ -3,9 +3,11 @@
 
 #include "OneWireTiming.h"
 #include "OneWireImpl.h"
+#include "Arduino.h"
 
 namespace onewire
 {
+	
 	class OneWireSW : public OneWireImpl
 	{
 	private: 
@@ -41,6 +43,10 @@ namespace onewire
 		virtual void write_bit(uint8_t v) override;
 		virtual uint8_t read_bit(void) override;
 		virtual void depower(void) override;
+		
 	};
+	
 }
+
+
 #endif

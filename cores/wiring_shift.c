@@ -20,10 +20,12 @@
 // @Project Includes
 //****************************************************************************
 #include "Arduino.h"
+#include "wiring_shift.h"
 
 //****************************************************************************
 // @Local Functions
 //****************************************************************************
+
 void shiftOut(pin_size_t ulDataPin, pin_size_t ulClockPin, BitOrder ulBitOrder, uint8_t ulVal)
 {
     uint8_t i ;

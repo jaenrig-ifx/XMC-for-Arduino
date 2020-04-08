@@ -23,12 +23,19 @@
 // @External Prototypes
 //****************************************************************************
 #ifdef __cplusplus
+extern "C" {
+    extern void serialEventRun(void);
+}
+
+void serialEvent() __attribute__((weak));
+void serialEvent1() __attribute__((weak));
 
 //****************************************************************************
 // @Project Includes
 //****************************************************************************
-#include "api/RingBuffer.h"
-#include "api/Stream.h"
+#include "Arduino.h"
+#include "RingBuffer.h"
+#include "Stream.h"
 
 //****************************************************************************
 // @Typedefs
@@ -117,6 +124,13 @@ private:
     RingBuffer* _rx_buffer;
     RingBuffer* _tx_buffer;
 };
-#endif  /* cplusplus */
+
+extern HardwareSerial Serial;
+
+#if (NUM_SERIAL > 1)
+extern HardwareSerial Serial1;
+#endif
+
+#endif
 
 #endif /* HardwareSerial_h */

@@ -85,7 +85,7 @@ Callback functions Contents
     Functions MUST be VERY SMALL as many tasks have to run in less than 1 ms as
     well as the main code.
 
-    Do NOT use blocking or slow callbacks that use AT LEAST the following Arduino
+    Do NOT use blocking or slow callbacks that use AT LEAST the following Ardunio
     functions
         delay           (this would become recursive)
         .print, .write, println on Serial or Liquid Crystal
@@ -221,7 +221,7 @@ NVIC_SetPriority( SysTick_IRQn, SYSTIMER_PRIORITY );
  * Special cases for callback action processing
  *      callback is NULL boolean delay_timer_expired is set to true
  */
-void delay( unsigned long dwMs )
+void delay( uint32_t dwMs )
 {
 setInterval( _MAX_TASKS - 1, dwMs );
 //Timer is always in list as last
@@ -233,52 +233,7 @@ while( !delay_timer_expired );
 delay_timer_expired = FALSE;
 }
 
-/*
- * \brief Pauses the program for the amount of time (in microseconds) specified as parameter.
- *
- * \param dwUs the number of microseconds to pause (uint32_t)
- */
 
-void delayMicroseconds( unsigned int usec )
-{
-if( usec == 0 )
-  return;
-else
-  do  
-    NOPS_FOR_USEC( )  // NOP loop to generate delay
-  while( --usec );
-}
-/*
- * \brief Returns the number of microseconds since the Arduino board began running the current program.
- *
- * This number will overflow (go back to zero), after approximately 70 minutes. 
- * On XMC boards the returned value has resolution of 1 microsecond as it is
- * calculated from a hardware timer running counting clock cycles to produce 
- * 1 millisecond interval interrupts.
- *
- * \note There are 1,000 microseconds in a millisecond and 1,000,000 microseconds in a second.
-
-   get micro seconds since power up 
-   Read milli seconds (in microseconds) and convert Systick counter to microseconds to add to it 
-   remember SysTick->VAL counts DOWN to zero */
-
-unsigned long micros( )
-{
-return ( ( ( SYSTICK_MS - SysTick->VAL ) / SYSTICK_US )
-            + ( g_systick_count * SYSTIMER_TICK_PERIOD_US ) );
-}
-/*
- * \brief Returns the number of milliseconds since the Arduino board began running the current program.
- *
- * This number will overflow (go back to zero), after approximately 50 days.
- *
- * \return Number of milliseconds since the program started (uint32_t)
- */
-
-unsigned long millis( )
-{
-return ( g_systick_count );
-}
 /* Handler function called from SysTick event handler.
         - Task scheduling loop
 
@@ -579,7 +534,15 @@ if( i == _MAX_TASKS )
   return -2;
 return i;
 }
-
+void delayMicroseconds(unsigned int usec)
+{
+if( usec == 0 )
+  return;
+else
+  do  
+    NOPS_FOR_USEC( )  // NOP loop to generate delay
+  while( --usec );
+}
 //****************************************************************************
 //                                 END OF FILE
 //****************************************************************************

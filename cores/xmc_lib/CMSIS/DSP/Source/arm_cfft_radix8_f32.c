@@ -1,5 +1,3 @@
-#ifdef ARM_LIB_CMSIS_DSP
-
 /* ----------------------------------------------------------------------
  * Project:      CMSIS DSP Library
  * Title:        arm_cfft_radix8_f32.c
@@ -285,5 +283,3 @@ uint16_t twidCoefModifier)
       twidCoefModifier <<= 3;
    } while (n2 > 7);
 }
-
-#endif /* ARM_LIB_CMSIS_DSP */

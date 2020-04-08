@@ -85,7 +85,6 @@ return ( i < NUM_TONE_PINS ) ? i : -1;
 // Min frequency usable = 1 Hz
 // Duration default of 0 for permanently on
 // Timer task ID is tone pin index _timer
-
 void tone( uint8_t _pin, unsigned int frequency, unsigned long duration )
 {
 int8_t _timer;

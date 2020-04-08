@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include "RadarDataProcessor.h"
 
 RadarDataProcessorClass::RadarDataProcessorClass()
@@ -129,16 +128,14 @@ void RadarDataProcessorClass::runAlgorithm(void)
     }
 
     // the interrupt time must be deleted in every cycle!
-    deleteTask( RadarDataProcessorClass::algoTask );
+    deleteTask(_interruptTimer);
 
     _available = true;
 }
 
-int RadarDataProcessorClass::algoTask(int taskId, int16_t param)
+void RadarDataProcessorClass::algoTask(int taskId, int16_t param)
 {
-RadarDataProcessor.runAlgorithm();
-return 1;
-
+    RadarDataProcessor.runAlgorithm();
 }
 
 void RadarDataProcessorClass::computeFft()
@@ -276,12 +273,11 @@ void RadarDataProcessorClass::detectMotionWithRawData(void)
     return;
 }
 
-int RadarDataProcessorClass::samplingTask(int taskId, int16_t param)
+void RadarDataProcessorClass::samplingTask(int taskId, int16_t param)
 {
-RadarDataProcessor.startAcq();
-RadarDataProcessor.sampleInQ();
-RadarDataProcessor.endAcq();
-return 1;
+    RadarDataProcessor.startAcq();
+    RadarDataProcessor.sampleInQ();
+    RadarDataProcessor.endAcq();
 }
 
 void RadarDataProcessorClass::enableSimpleMotionDetection()

@@ -1,5 +1,3 @@
-#ifdef ARM_LIB_CMSIS_NN
-
 /*
  * Copyright (C) 2010-2018 Arm Limited or its affiliates. All rights reserved.
  *
@@ -151,5 +149,3 @@ __STATIC_FORCEINLINE void *read_and_pad_reordered(void *source, q31_t * out1, q3
 #endif
 
 #endif
-
-#endif /* ARM_LIB_CMSIS_NN */

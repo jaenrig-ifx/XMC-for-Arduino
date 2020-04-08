@@ -2,6 +2,8 @@
 #define ONEWIRE_CONF_H
 
 #include <SPI.h>
+#include <Arduino.h>
+#include <xmc_spi.h>
 
 namespace onewire {
 	
@@ -49,6 +51,7 @@ XMC_SPI_t mappingHW[] =
 			.input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD
 		}
 	},
+	
 	{
 		.channel          = XMC_SPI0_CH1,
 		.channel_config   = {
@@ -86,6 +89,7 @@ XMC_SPI_t mappingHW[] =
 			.input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD
 		}
 	},
+	
 	{
 		.channel          = XMC_SPI0_CH1,
 		.channel_config   = {
@@ -123,6 +127,7 @@ XMC_SPI_t mappingHW[] =
 			.input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD
 		}
 	},
+	
 	{
 		.channel          = XMC_SPI0_CH1,
 		.channel_config   = {
@@ -207,6 +212,7 @@ XMC_SPI_t mappingHW[] =
 			.input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD
 		}
 	},
+	
 	{
 		.channel          = XMC_SPI0_CH0,
 		.channel_config   = {
@@ -244,6 +250,7 @@ XMC_SPI_t mappingHW[] =
 			.input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD
 		}
 	},
+	
 	{
 		.channel          = XMC_SPI0_CH0,
 		.channel_config   = {
@@ -290,6 +297,7 @@ XMC_SPI_t mappingHW[] =
 
 XMC_SPI_t mappingHW[] =
 {
+	
 	{	//DONE tested with -O0
 		.channel          = XMC_SPI1_CH0,
 		.channel_config   = {
@@ -325,6 +333,7 @@ XMC_SPI_t mappingHW[] =
 			.output_strength = XMC_GPIO_OUTPUT_STRENGTH_MEDIUM
 		},
 	},
+	
 	{
 		.channel          = XMC_SPI1_CH1,
 		.channel_config   = {
@@ -360,6 +369,7 @@ XMC_SPI_t mappingHW[] =
 			.output_strength = XMC_GPIO_OUTPUT_STRENGTH_MEDIUM
 		},
 	},
+	
 	{
 		.channel          = XMC_SPI2_CH1,
 		.channel_config   = {
@@ -395,6 +405,7 @@ XMC_SPI_t mappingHW[] =
 			.output_strength = XMC_GPIO_OUTPUT_STRENGTH_MEDIUM
 		},
 	},
+	
 	{
 		.channel          = XMC_SPI1_CH0,
 		.channel_config   = {
@@ -430,6 +441,7 @@ XMC_SPI_t mappingHW[] =
 			.output_strength = XMC_GPIO_OUTPUT_STRENGTH_MEDIUM
 		},
 	},
+	
 	{
 		.channel          = XMC_SPI0_CH1,
 		.channel_config   = {
@@ -465,6 +477,7 @@ XMC_SPI_t mappingHW[] =
 			.output_strength = XMC_GPIO_OUTPUT_STRENGTH_MEDIUM
 		},
 	},
+	
 	{
 		.channel          = XMC_SPI2_CH0,
 		.channel_config   = {
@@ -500,7 +513,9 @@ XMC_SPI_t mappingHW[] =
 			.output_strength = XMC_GPIO_OUTPUT_STRENGTH_MEDIUM
 		},
 	}
+
 };
+
 #else
 // unknown device used
 #define NUM_ONEWIRE_HW  			0
@@ -508,7 +523,10 @@ XMC_SPI_t mappingHW[] =
 #define PIN_TO_ONEWIRE_HW(pin)		-1
 
 XMC_SPI_t mappingHW[1];
+
 #endif
 	
+	
 }	/* namespace onewire */
+
 #endif

@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include "OneWireTiming.h"
 
 namespace onewire

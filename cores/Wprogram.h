@@ -27,5 +27,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //****************************************************************************
 // @Project Includes
 //****************************************************************************
+#include "Arduino.h"
 
 #endif /* WPROGRAM_H_ */

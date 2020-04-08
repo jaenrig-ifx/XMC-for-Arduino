@@ -1,11 +1,11 @@
 #include <IFXRadarPulsedDoppler.h>
 
 // IFX Radar Pulsed Doppler Object
-IFXRadarPulsedDoppler radarDev;
+IFXRadarPulsedDoppler tjuefire;
 
 void myResultCallback()
 {
-  uint8_t targetDirection = radarDev.getDirection();
+  uint8_t targetDirection = tjuefire.getDirection();
   if(targetDirection == 1)
   {
     // turn on Red LED for departing target
@@ -20,7 +20,7 @@ void myResultCallback()
     digitalWrite(LED_RED, HIGH);
     digitalWrite(LED_BLUE, HIGH);      
   }
-  else if(radarDev.targetAvailable() == true)
+  else if(tjuefire.targetAvailable() == true)
   {
     // turn on Blue LED for just normal motion with no meaningful direction
     digitalWrite(LED_GREEN, HIGH);
@@ -45,13 +45,13 @@ void setup() {
   pinMode(LED_BLUE, OUTPUT);
   digitalWrite(LED_BLUE, HIGH);
 
-  radarDev.initHW();
-  radarDev.registerResultCallback(myResultCallback);
-  radarDev.begin();
+  tjuefire.initHW();
+  tjuefire.registerResultCallback(myResultCallback);
+  tjuefire.begin();
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  radarDev.run();
+  tjuefire.run();
 }

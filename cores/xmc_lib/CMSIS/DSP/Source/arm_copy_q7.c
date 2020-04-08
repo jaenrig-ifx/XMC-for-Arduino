@@ -1,5 +1,3 @@
-#ifdef ARM_LIB_CMSIS_DSP
-
 /* ----------------------------------------------------------------------
  * Project:      CMSIS DSP Library
  * Title:        arm_copy_q7.c
@@ -103,5 +101,3 @@ void arm_copy_q7(
 /**
  * @} end of BasicCopy group
  */
-
-#endif /* ARM_LIB_CMSIS_DSP */

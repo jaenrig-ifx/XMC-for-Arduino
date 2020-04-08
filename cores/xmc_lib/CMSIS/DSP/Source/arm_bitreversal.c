@@ -1,5 +1,3 @@
-#ifdef ARM_LIB_CMSIS_DSP
-
 /* ----------------------------------------------------------------------
  * Project:      CMSIS DSP Library
  * Title:        arm_bitreversal.c
@@ -230,5 +228,3 @@ uint16_t * pBitRevTab)
       pBitRevTab += bitRevFactor;
    }
 }
-
-#endif /* ARM_LIB_CMSIS_DSP */

@@ -24,8 +24,8 @@ Led.Off( LED1 );
 
 void loop( )
 {
-delay( 1000 );
-Led.Off( LED2 );
-Led.Toggle( LED1 );
+Led.Toggle(LED1);
+Led.Toggle(LED2);
+delayMicroseconds(1000);
 
 }

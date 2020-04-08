@@ -29,7 +29,16 @@ extern "C" {
 //****************************************************************************
 // @External Prototypes
 //****************************************************************************
-     /*
+
+    /*
+     * \brief Configures the reference voltage used for analog input (i.e. the value used as the top of the input range).
+     * This function is kept only for compatibility with existing AVR based API.
+     *
+     * \param ulMmode Should be set to DEFAULT.
+     *
+     */
+    extern void analogReference( uint8_t ulMode ) ;
+    /*
      * \brief Sets the frequency for analogWrite PWM.
      * 
      *    Returns -2 invalid pin
@@ -95,7 +104,7 @@ extern "C" {
     extern uint16_t getAnalogReadMaximum( );
 
     /*
-     * \brief Get the maximum value for current resolution for analogWrite. 
+     * \brief Get the maximum value for current resolution for analogRite. 
      * \note Default is 255
      * \note Maximum is 65535
      *

@@ -26,6 +26,7 @@
 // @Project Includes
 //****************************************************************************
 #include <inttypes.h>
+#include <Arduino.h>
 
 //****************************************************************************
 // @Defines
@@ -34,17 +35,9 @@
 #define INT1 1
 
 #define PIN_INTERRUPT_NO_MODE 5
-#define FALLING     0       // same define as for LOW 
-#define RISING      1       // same define as for HIGH 
-#define CHANGE      2
-
-//****************************************************************************
-// @Typedefs
-//****************************************************************************
-
-//****************************************************************************
-// @External Prototypes
-//****************************************************************************
+// #define FALLING     0       // same define as for LOW 
+// #define RISING      1       // same define as for HIGH 
+// #define CHANGE      2
 
 
 #endif /* W_INTERRUPTS_H */

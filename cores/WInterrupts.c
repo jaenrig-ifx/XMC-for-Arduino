@@ -22,13 +22,13 @@
 //****************************************************************************
 // @Project Includes
 //****************************************************************************
-#include "Arduino.h"
+#include "WInterrupts.h"
 
 //****************************************************************************
 // @Prototypes Of Local Functions
 //****************************************************************************
-static interrupt_cb_t interrupt_0_cb = NULL;
-static interrupt_cb_t interrupt_1_cb = NULL;
+static voidFuncPtr interrupt_0_cb = NULL;
+static voidFuncPtr interrupt_1_cb = NULL;
 
 //****************************************************************************
 // @Local Functions

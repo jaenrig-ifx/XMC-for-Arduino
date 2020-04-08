@@ -229,24 +229,16 @@ extern "C" {
 //****************************************************************************
 // @Arduino Core Includes
 //****************************************************************************
+#include "wiring_constants.h"
+#include "binary.h"
 #include "wiring_digital.h"
 #include "wiring_analog.h"
+#include "wiring_shift.h"
 #include "wiring_time.h"
+#include "itoa.h"
 #include "dtostrf.h"
-#include "WInterrupts.h"
-#include "api/Common.h"
-#include "api/binary.h"
-#include "api/Print.h"
-#include "api/Client.h"
-#include "api/IPAddress.h"
-#include "api/itoa.h"
-#include "api/Printable.h"
-#include "api/RingBuffer.h"
-#include "api/Server.h"
-#include "api/Stream.h"
-#include "api/String.h"
 #include "api/WCharacter.h"
-#include"api/Udp.h"
+#include "WInterrupts.h"
 
 
 //****************************************************************************
@@ -256,12 +248,13 @@ extern "C" {
 
 #ifdef __cplusplus
 } // extern "C"
-#include "Tone.h"
-#include "WMath.h"
 #endif	// __cplusplus
 
-
+#include "Print.h"
 #include "HardwareSerial.h"
+#include "Tone.h"
+#include "WMath.h"
+#include "api/Common.h"
 
 //****************************************************************************
 // @Board Variant Includes

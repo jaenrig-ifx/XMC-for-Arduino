@@ -28,7 +28,7 @@
 #define _SW_SPI_H
 
 #include <Arduino.h>
-#include <api/binary.h>
+#include <binary.h>
 
 const uint8_t MSBFIRST_BITS[] = { 
     B10000000,

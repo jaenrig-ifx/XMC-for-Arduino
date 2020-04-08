@@ -1,4 +1,5 @@
-/* IFX9201 H-Bridge Motor Control Example for the H-Bridge 2GO Evaluation Board
+/*
+  IFX9201 H-Bridge Motor Control Example for the H-Bridge 2GO Evaluation Board
 
             PWM Mode ONLY With Error trapping and display
             
@@ -12,26 +13,18 @@
                 forwards( 50 )  is same as above use 50%
 
         Serial Baud Rate 115200
-        
-  Remember to define your pins for connections how your board is set if NOT H-Bridge 2GO
-    DIR     Direction
-    DIS     Disable
-    PWM     Pulse Width Modulation (speed)
 */
-#include <IFX9201.h>
+#include "Arduino.h"
+#include "IFX9201.h"
 #include <LED.h>
-
-// Change the DIR, PWM, and DIS pins to custom ones for other boards
-// Defined for H-Bridge 2GO
-#define DIR		6
-#define DIS		10
-#define PWM 	11
 
 // error display defines stringifying constants
 // print constant name as string and EOL
 #define str(x)  Serial.println( #x )
 // print value of constant as string
 #define str1(x) str(x)
+// print constant name as string
+#define str2(x) Serial.print( #x )
 
 // IFX9201 Object
 IFX9201 IFX9201_HBridge = IFX9201( );
@@ -72,9 +65,9 @@ switch( err )
     default:    Serial.print( "Unknown error code of - " );
                 Serial.println( err );
     }
-#ifdef XMC_BOARD
+#ifdef XMC_BOARD_NAME
 Serial.print( "Running on - " );
-str1( XMC_BOARD );
+str1( XMC_BOARD_NAME );
 #endif
 }
 
@@ -88,6 +81,7 @@ void setup( )
   Serial.begin( 115200 );
 
   // Use PWM Mode
+  // Change the DIR, PWM, and DIS pins to custom ones for other boards
   IFX9201_HBridge.begin( DIR, PWM, DIS );
 
   delay( 1000 );
