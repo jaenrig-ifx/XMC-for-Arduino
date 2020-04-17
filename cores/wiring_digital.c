@@ -26,6 +26,11 @@
 
 void pinMode( pin_size_t pin, PinMode mode )
 {
+  if(mode==OUTPUT)
+  {mode= (uint8_t)mode;
+  mode=mode+127;
+
+  }
 	XMC_GPIO_CONFIG_t gpio_conf;
 	gpio_conf.mode = mode;
 	gpio_conf.output_level = XMC_GPIO_OUTPUT_LEVEL_LOW;
