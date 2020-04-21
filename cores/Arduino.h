@@ -230,12 +230,12 @@ extern "C" {
 // @Arduino Core Includes
 //****************************************************************************
 #include "wiring_constants.h"
-#include "binary.h"
+#include "api/Binary.h"
 #include "wiring_digital.h"
 #include "wiring_analog.h"
 #include "wiring_shift.h"
 #include "wiring_time.h"
-#include "itoa.h"
+#include "api/itoa.h"
 #include "dtostrf.h"
 #include "api/WCharacter.h"
 #include "WInterrupts.h"
