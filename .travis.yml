@@ -8,8 +8,8 @@ git:
 jobs:
   include:
   
-    - stage: develop
-      if: branch = develop
+    - stage: pinrefactor
+      if: branch = pinrefactor
       addons:
         apt:
           packages:
