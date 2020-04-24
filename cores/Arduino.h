@@ -230,7 +230,7 @@ extern "C" {
 // @Arduino Core Includes
 //****************************************************************************
 #include "wiring_constants.h"
-#include "api/binary.h"
+#include "api/Binary.h"
 #include "wiring_digital.h"
 #include "wiring_analog.h"
 #include "wiring_shift.h"
