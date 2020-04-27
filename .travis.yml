@@ -31,7 +31,6 @@ jobs:
         - sudo rm -r -f /home/travis/.arduino15/packages/Infineon/hardware/ 
         - sudo mkdir /home/travis/.arduino15/packages/Infineon/hardware/${PACKAGE_PATH}
         - sudo mv ./* /home/travis/.arduino15/packages/Infineon/hardware/${PACKAGE_PATH}
-        - sudo chmod 775 /home/travis/.arduino15/*
       script:
         - BOARDS=(XMC1100_Boot_Kit XMC1100_XMC2GO XMC1100_H_BRIDGE2GO XMC1300_Boot_Kit XMC1300_Sense2GoL XMC4700_Radar_Baseboard XMC4700_Relax_Kit)
         - sudo /home/travis/arduino-ci/arduino-cli sketch new ci-build
@@ -81,5 +80,5 @@ jobs:
          
       notifications:
         email:
-          on_success: change #test comment to check build fail
+          on_success: change 
           on_failure: change
