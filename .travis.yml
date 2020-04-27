@@ -80,5 +80,5 @@ jobs:
          
       notifications:
         email:
-          on_success: change
+          on_success: change #test comment to check build fail
           on_failure: change
