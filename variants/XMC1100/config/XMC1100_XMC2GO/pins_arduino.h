@@ -215,9 +215,9 @@ Serial.IrqHandler( );
 }
 #endif
 #endif  /* ARDUINO_MAIN */
-
 #ifdef __cplusplus
 extern HardwareSerial Serial;
 #endif  /* cplusplus */
+
 
 #endif // PINS_ARDUINO_H_

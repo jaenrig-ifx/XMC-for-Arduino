@@ -25,10 +25,11 @@
 #ifdef __cplusplus
 extern "C" {
     extern void serialEventRun(void);
+    void serialEvent() __attribute__((weak));
+void serialEvent1() __attribute__((weak));
 }
 
-void serialEvent() __attribute__((weak));
-void serialEvent1() __attribute__((weak));
+
 
 //****************************************************************************
 // @Project Includes
