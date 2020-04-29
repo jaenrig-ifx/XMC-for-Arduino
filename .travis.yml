@@ -20,7 +20,7 @@ jobs:
         - $HOME/arduino-ci/
 
       before_install:
-       - sudo mkdir -p /home/travis/arduino-ci/
+        - sudo mkdir -p /home/travis/arduino-ci/
         - PATH=$PATH:$HOME/arduino-ci
         - export PATH
         - if ! [ "$(ls /home/travis/arduino-ci/arduino-cli)" ]; then sudo curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=/home/travis/arduino-ci sudo sh; fi;
