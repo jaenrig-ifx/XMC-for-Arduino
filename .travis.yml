@@ -30,7 +30,7 @@ jobs:
         - PACKAGE_PATH=$(ls /home/travis/.arduino15/packages/Infineon/hardware/)
         - sudo rm /home/travis/.arduino15/packages/Infineon/hardware/* -rf
         - sudo mkdir /home/travis/.arduino15/packages/Infineon/hardware/${PACKAGE_PATH}
-        - sudo mv ./* /home/travis/.arduino15/packages/Infineon/hardware/${PACKAGE_PATH}
+        - sudo mv ./* /home/travis/.arduino15/packages/Infineon/hardware/${PACKAGE_PATH} #test build
       script:
         - BOARDS=(XMC1100_Boot_Kit XMC1100_XMC2GO XMC1100_H_BRIDGE2GO XMC1300_Boot_Kit XMC1300_Sense2GoL XMC4700_Radar_Baseboard XMC4700_Relax_Kit)
         - sudo /home/travis/arduino-ci/arduino-cli sketch new ci-build
