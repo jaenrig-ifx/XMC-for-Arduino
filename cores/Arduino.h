@@ -249,9 +249,9 @@ extern "C" {
 #ifdef __cplusplus
 } // extern "C"
 #endif	// __cplusplus
-
-#include "Print.h"
 #include "HardwareSerial.h"
+#include "Print.h"
+
 #include "Tone.h"
 #include "WMath.h"
 #include "api/Common.h"
