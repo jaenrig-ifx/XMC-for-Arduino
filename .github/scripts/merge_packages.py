@@ -49,11 +49,17 @@ def main(args):
     tools = {}
     platforms = {} 
     pkg1 = load_package(args[1])
+    
     tools = merge_objects(tools, pkg1['tools']);
+   
     platforms = merge_objects(platforms, pkg1['platforms']);
+    
     pkg2 = load_package(args[2])
+    
     tools = merge_objects(tools, pkg2['tools']);
+    
     platforms = merge_objects(platforms, pkg2['platforms']);
+    
 
     pkg1['tools'] = []
     pkg1['platforms'] = []
@@ -68,7 +74,9 @@ def main(args):
             print("Adding platform {0}-{1}".format(name, version), file=sys.stderr)
             pkg1['platforms'].append(platforms[name][version])
                 
+    
     pkg1['platforms'] = sorted(pkg1['platforms'], key=lambda k: LooseVersion(pkgVersionNormalized(k['version'])), reverse=True)
+
 
     json.dump({'packages':[pkg1]}, sys.stdout, indent=2)
 

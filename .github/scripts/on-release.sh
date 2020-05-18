@@ -26,7 +26,7 @@ RELEASE_ID=`echo $EVENT_JSON | jq -r '.release.id'`
 RELEASE_BODY=`echo $EVENT_JSON | jq -r '.release.body'`
 
 OUTPUT_DIR="$GITHUB_WORKSPACE/build"
-PACKAGE_NAME="XMC-IFX-$RELEASE_TAG"
+PACKAGE_NAME="XMC_IFX_$RELEASE_TAG"
 PACKAGE_JSON_MERGE="$GITHUB_WORKSPACE/.github/scripts/merge_packages.py"
 PACKAGE_JSON_TEMPLATE="$GITHUB_WORKSPACE/package/package_infineon_index.template.json"
 PACKAGE_JSON_REL="package_infineon_index.json"
