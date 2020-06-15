@@ -20,7 +20,8 @@ if [ $draft == "true" ]; then
 fi
 
 RELEASE_PRE=`echo $EVENT_JSON | jq -r '.release.prerelease'`
-RELEASE_TAG=`echo $EVENT_JSON | jq -r '.release.tag_name'`
+RELEASE_TAG_WITH_VERSION=`echo $EVENT_JSON | jq -r '.release.tag_name'`
+RELEASE_TAG=${RELEASE_TAG_WITH_VERSION:1}
 RELEASE_BRANCH=`echo $EVENT_JSON | jq -r '.release.target_commitish'`
 RELEASE_ID=`echo $EVENT_JSON | jq -r '.release.id'`
 RELEASE_BODY=`echo $EVENT_JSON | jq -r '.release.body'`
