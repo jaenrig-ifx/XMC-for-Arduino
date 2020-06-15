@@ -138,7 +138,7 @@ echo "Cleaning up folders ..."
 # Compress package folder
 echo "Creating ZIP ..."
 pushd "$OUTPUT_DIR" >/dev/null
-zip -qr "$PACKAGE_ZIP" -i "$PACKAGE_NAME"
+zip -qr "$PACKAGE_ZIP" "$PACKAGE_NAME"
 if [ $? -ne 0 ]; then echo "ERROR: Failed to create $PACKAGE_ZIP ($?)"; exit 1; fi
 
 # Calculate SHA-256
