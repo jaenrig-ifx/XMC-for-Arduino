@@ -20,9 +20,9 @@ if [ $draft == "true" ]; then
 fi
 
 RELEASE_PRE=`echo $EVENT_JSON | jq -r '.release.prerelease'`
-RELEASE_TAG_WITH_VERSION=`echo $EVENT_JSON | jq -r '.release.tag_name'`
+RELEASE_TAG=`echo $EVENT_JSON | jq -r '.release.tag_name'`
 
-RELEASE_TAG=${RELEASE_TAG_WITH_VERSION:1}
+#RELEASE_TAG=${RELEASE_TAG_WITH_VERSION:1}
 echo "i am trying to get thois right"
 echo "release tag with V: $RELEASE_TAG_WITH_VERSION"
 echo "release tag without V: $RELEASE_TAG"
