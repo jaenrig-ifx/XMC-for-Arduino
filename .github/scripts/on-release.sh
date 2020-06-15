@@ -23,7 +23,7 @@ RELEASE_PRE=`echo $EVENT_JSON | jq -r '.release.prerelease'`
 RELEASE_TAG_WITH_VERSION=`echo $EVENT_JSON | jq -r '.release.tag_name'`
 
 RELEASE_TAG=${RELEASE_TAG_WITH_VERSION:1}
-echo "i am trying to get thois right"
+echo "i am trying to get this right"
 echo "release tag with V: $RELEASE_TAG_WITH_VERSION"
 echo "release tag without V: $RELEASE_TAG"
 RELEASE_BRANCH=`echo $EVENT_JSON | jq -r '.release.target_commitish'`
@@ -121,13 +121,13 @@ PACKAGE_ZIP="$PACKAGE_NAME.zip"
 
 # Copy all core files to the package folder
 echo "Copying files for packaging ..."
-#echo cp -Rf "$GITHUB_WORKSPACE/"           "$PKG_DIR/"
-echo cp -Rf "$GITHUB_WORKSPACE/cores"      "$PKG_DIR/"
-echo cp -Rf "$GITHUB_WORKSPACE/libraries"  "$PKG_DIR/"
-echo cp -Rf "$GITHUB_WORKSPACE/variants"   "$PKG_DIR/"
-echo cp -Rf "$GITHUB_WORKSPACE/*.md"       "$PKG_DIR/"
-echo cp -Rf "$GITHUB_WORKSPACE/*.txt"      "$PKG_DIR/"
-echo cp -Rf "$GITHUB_WORKSPACE/*.json"     "$PKG_DIR/"
+echo cp -Rf "$GITHUB_WORKSPACE"           "$PKG_DIR"
+# echo cp -Rf "$GITHUB_WORKSPACE/cores"      "$PKG_DIR/"
+# echo cp -Rf "$GITHUB_WORKSPACE/libraries"  "$PKG_DIR/"
+# echo cp -Rf "$GITHUB_WORKSPACE/variants"   "$PKG_DIR/"
+# echo cp -Rf "$GITHUB_WORKSPACE/*.md"       "$PKG_DIR/"
+# echo cp -Rf "$GITHUB_WORKSPACE/*.txt"      "$PKG_DIR/"
+# echo cp -Rf "$GITHUB_WORKSPACE/*.json"     "$PKG_DIR/"
 
 
 # Remove unnecessary files in the package folder
