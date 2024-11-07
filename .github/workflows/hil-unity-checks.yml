@@ -179,6 +179,7 @@ jobs:
               done # end of TEST loop flash
 
               # loop over all tests for one example and monitor the serial output
+              sleep 5 # wait for the device to be ready
               for ((idx=0; idx<${#TESTS[@]}; ++idx)); do
                 echo "=============================================================================================================="
                 echo "Monitor on index $idx for TEST: ${TESTS[idx]} under EXAMPLE: ${EXAMPLE} and LIB: ${LIB}"
