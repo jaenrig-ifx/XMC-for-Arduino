@@ -3,8 +3,8 @@ Infineon.xmc.XMC4700_Relax_Kit:
     1:
       - "CAN_connected_node2"
       - "CAN_connected_node1"
-    # 2:
-    #   - CAN
+    2:
+      - CAN
 
   Wire:
     1:
@@ -18,8 +18,8 @@ Infineon.xmc.XMC1400_XMC2GO:
     1:
       - "CAN_connected_node2"
       - "CAN_connected_node1"
-    # 2:
-    #   - CAN
+    2:
+      - CAN
 
 Infineon.xmc.XMC1100_XMC2GO:
   Wire:
