@@ -186,7 +186,7 @@ jobs:
                         /opt/runner_support/py_console.py \
                           --port ${PORTS[idx]} \
                           --baud 115200 \
-                          --runtime 59 \
+                          --runtime 50 \
                           --report ~/artefact/${LIB}/${EXAMPLE}/${TESTS[idx]}/${{ env.device }}/report.json
                 echo "=============================================================================================================="
               done # end of TEST loop monitor
