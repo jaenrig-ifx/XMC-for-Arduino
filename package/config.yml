@@ -12,5 +12,5 @@ include:
 index-name: package_infineon_index
 server: 
   type: github
-  owner: Infineon
+  owner: jaenrig-ifx
   repo: XMC-for-Arduino
