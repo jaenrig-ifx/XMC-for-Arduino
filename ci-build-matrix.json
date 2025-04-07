@@ -1,8 +1,7 @@
 {    
     "os" : [
         "ubuntu-latest",
-        "windows-latest",
-        "macos-latest"
+        "windows-latest"
     ],
     "fqbn" : [
         "Infineon:xmc:XMC1100_Boot_Kit",
