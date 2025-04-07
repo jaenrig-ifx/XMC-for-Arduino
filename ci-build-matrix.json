@@ -14,6 +14,6 @@
         "Infineon:xmc:XMC1400_Arduino_Kit"
     ],
     "example" : [
-        "LED/examples/SimpleLED/SimpleLED.ino"
+        "libraries/LED/examples/SimpleLED/SimpleLED.ino"
     ]
 }
