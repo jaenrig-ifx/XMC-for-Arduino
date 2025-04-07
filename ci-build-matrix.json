@@ -1,9 +1,9 @@
-{    
-    "os" : [
+{
+    "os": [
         "ubuntu-latest",
         "windows-latest"
     ],
-    "fqbn" : [
+    "fqbn": [
         "Infineon:xmc:XMC1100_Boot_Kit",
         "Infineon:xmc:XMC1100_XMC2GO",
         "Infineon:xmc:XMC1300_Boot_Kit",
@@ -13,13 +13,13 @@
         "Infineon:xmc:XMC1400_XMC2GO",
         "Infineon:xmc:XMC1400_Arduino_Kit"
     ],
-    "example" : [
+    "example": [
         "libraries/LED/examples/SimpleLED/SimpleLED.ino"
     ],
     "include": [
-        { 
-            "fqbn": "Infineon:xmc:XMC4200_Platform2GO", 
-            "example": "libraries/CAN/examples/CANLoopBack/CANLoopBack.ino" 
+        {
+            "fqbn": "Infineon:xmc:XMC4200_Platform2GO",
+            "example": "libraries/CAN/examples/CANLoopBack/CANLoopBack.ino"
         }
     ]
 }
