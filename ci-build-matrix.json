@@ -15,5 +15,11 @@
     ],
     "example" : [
         "libraries/LED/examples/SimpleLED/SimpleLED.ino"
+    ],
+    "include": [
+        { 
+            "fqbn": "Infineon:xmc:XMC4200_Platform2GO", 
+            "example": "libraries/CAN/examples/CANLoopBack/CANLoopBack.ino" 
+        }
     ]
 }
