@@ -5,7 +5,7 @@ on:
     
 jobs:
   arduino-devops:
-    uses: Infineon/arduino-devops/.github/workflows/compile-examples.yml@latest
+    uses: Infineon/arduino-devops/.github/workflows/compile-examples.yml@matrix-include-exclude
     with:
       ci-matrix-file-json: ci-build-matrix.json
     secrets: inherit
