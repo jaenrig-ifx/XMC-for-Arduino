@@ -11,8 +11,7 @@
         "libraries/LED/examples/SimpleLED/SimpleLED.ino"
     ],
     "include": [
-        { 
-            "os": "ubuntu-latest", 
+        {
             "fqbn": "Infineon:xmc:XMC1300_Boot_Kit", 
             "example" : "libraries/LED/examples/SimpleLED/SimpleLED.ino" 
         }
