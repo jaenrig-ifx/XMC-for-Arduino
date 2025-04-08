@@ -5,13 +5,27 @@
     ],
     "fqbn": [
         "Infineon:xmc:XMC1100_Boot_Kit",
-        "Infineon:xmc:XMC1100_XMC2GO"
+        "Infineon:xmc:XMC1100_XMC2GO",
+        "Infineon:xmc:XMC1300_Boot_Kit",
+        "Infineon:xmc:XMC4200_Platform2GO",
+        "Infineon:xmc:XMC4400_Platform2GO",
+        "Infineon:xmc:XMC4700_Relax_Kit",
+        "Infineon:xmc:XMC1400_XMC2GO",
+        "Infineon:xmc:XMC1400_Arduino_Kit"
     ],
     "example": [
-        "libraries/LED/examples/SimpleLED/SimpleLED.ino"
+        "libraries/LED/examples/SimpleLED/SimpleLED.ino",
+        "libraries/RTC/AlarmRTC/AlarmRTC.ino",
+        "libraries/RTC/SimpleRTC/SimpleRTC.ino",
+        "libraries/SPI/SPI_MOSI_to_MISO_SameDevice/SPI_MOSI_to_MISO_SameDevice.ino",
+        "libraries/Wire/master_reader/master_reader.ino",
+        "libraries/Wire/master_writer/master_writer.ino",
+        "libraries/Wire/slave_receiver/slave_receiver.ino",
+        "libraries/Wire/slave_sender/slave_sender.ino"
     ],
     "include": [
-        {
+        { 
+            "os": "ubuntu-latest", 
             "fqbn": "Infineon:xmc:XMC1300_Boot_Kit", 
             "example" : "libraries/LED/examples/SimpleLED/SimpleLED.ino" 
         }
