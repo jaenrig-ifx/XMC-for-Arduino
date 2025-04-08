@@ -15,7 +15,6 @@
     ],
     "example": [
         "libraries/LED/examples/SimpleLED/SimpleLED.ino",
-        "libraries/RTC/examples/AlarmRTC/AlarmRTC.ino",
         "libraries/RTC/examples/SimpleRTC/SimpleRTC.ino",
         "libraries/SPI/examples/SPI_MOSI_to_MISO_SameDevice/SPI_MOSI_to_MISO_SameDevice.ino",
         "libraries/Wire/examples/master_reader/master_reader.ino",
