@@ -15,12 +15,12 @@
     ],
     "example": [
         "libraries/LED/examples/SimpleLED/SimpleLED.ino",
-        "libraries/RTC/AlarmRTC/AlarmRTC.ino",
-        "libraries/RTC/SimpleRTC/SimpleRTC.ino",
-        "libraries/SPI/SPI_MOSI_to_MISO_SameDevice/SPI_MOSI_to_MISO_SameDevice.ino",
-        "libraries/Wire/master_reader/master_reader.ino",
-        "libraries/Wire/master_writer/master_writer.ino",
-        "libraries/Wire/slave_receiver/slave_receiver.ino",
-        "libraries/Wire/slave_sender/slave_sender.ino"
+        "libraries/RTC/examples/AlarmRTC/AlarmRTC.ino",
+        "libraries/RTC/examples/SimpleRTC/SimpleRTC.ino",
+        "libraries/SPI/examples/SPI_MOSI_to_MISO_SameDevice/SPI_MOSI_to_MISO_SameDevice.ino",
+        "libraries/Wire/examples/master_reader/master_reader.ino",
+        "libraries/Wire/examples/master_writer/master_writer.ino",
+        "libraries/Wire/examples/slave_receiver/slave_receiver.ino",
+        "libraries/Wire/examples/slave_sender/slave_sender.ino"
     ]
 }
