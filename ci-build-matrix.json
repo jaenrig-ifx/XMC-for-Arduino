@@ -4,8 +4,7 @@
         "windows-latest"
     ],
     "fqbn": [
-        "Infineon:xmc:XMC1100_Boot_Kit",
-        "Infineon:xmc:XMC1100_XMC2GO"
+        "Infineon:xmc:XMC1100_Boot_Kit"
     ],
     "example": [
         "libraries/LED/examples/SimpleLED/SimpleLED.ino"
