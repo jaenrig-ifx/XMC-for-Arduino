@@ -21,5 +21,12 @@
         "libraries/Wire/examples/master_writer/master_writer.ino",
         "libraries/Wire/examples/slave_receiver/slave_receiver.ino",
         "libraries/Wire/examples/slave_sender/slave_sender.ino"
+    ],
+    "include" : [
+        {
+            "os" : "ubuntu-latest",
+            "fqbn" : "Infineon:xmc:XMC1100_Boot_Kit",
+            "examples" : "libraries/I2S/examples/samplesValues/samplesValues.ino"
+        }
     ]
 }
