@@ -22,12 +22,5 @@
         "libraries/Wire/master_writer/master_writer.ino",
         "libraries/Wire/slave_receiver/slave_receiver.ino",
         "libraries/Wire/slave_sender/slave_sender.ino"
-    ],
-    "include": [
-        { 
-            "os": "ubuntu-latest", 
-            "fqbn": "Infineon:xmc:XMC1300_Boot_Kit", 
-            "example" : "libraries/LED/examples/SimpleLED/SimpleLED.ino" 
-        }
     ]
 }
