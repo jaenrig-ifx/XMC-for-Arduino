@@ -4,7 +4,7 @@ on:
   push:
     
 jobs:
-  arduino-devops:
+  compile-examples:
     uses: Infineon/arduino-devops/.github/workflows/compile-examples.yml@compile-example-os-board-jobs
     with:
       ci-matrix-file-json: ci-build-matrix.json 
