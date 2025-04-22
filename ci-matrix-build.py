@@ -1,0 +1,3 @@
+
+matrix = '{ "os": [ "ubuntu-latest", "windows-latest" ], "fqbn": [ "Infineon:xmc:XMC1100_Boot_Kit", "Infineon:xmc:XMC1100_XMC2GO", "Infineon:xmc:XMC1300_Boot_Kit", "Infineon:xmc:XMC4200_Platform2GO", "Infineon:xmc:XMC4400_Platform2GO", "Infineon:xmc:XMC4700_Relax_Kit", "Infineon:xmc:XMC1400_XMC2GO", "Infineon:xmc:XMC1400_Arduino_Kit" ] }' 
+print(matrix)
