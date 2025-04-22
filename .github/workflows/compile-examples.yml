@@ -6,5 +6,6 @@ on:
 jobs:
   arduino-devops:
     uses: Infineon/arduino-devops/.github/workflows/compile-examples.yml@compile-example-os-board-jobs
-    ci-matrix-file-json: ci-build-matrix.json 
+    with:
+      ci-matrix-file-json: ci-build-matrix.json 
     secrets: inherit
