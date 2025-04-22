@@ -10,15 +10,15 @@ if len(sys.argv) != 2:
 
 os = sys.argv[1]
 
-if os == "ubuntu-latest":
-    matrix = '{ "fqbn": [ "Infineon:xmc:XMC1100_Boot_Kit", "Infineon:xmc:XMC1100_XMC2GO", "Infineon:xmc:XMC1300_Boot_Kit", "Infineon:xmc:XMC4200_Platform2GO", "Infineon:xmc:XMC4400_Platform2GO", "Infineon:xmc:XMC4700_Relax_Kit", "Infineon:xmc:XMC1400_XMC2GO", "Infineon:xmc:XMC1400_Arduino_Kit" ] }' 
-elif os == "windows-latest":
-    matrix = '{ "fqbn": [ "Infineon:xmc:XMC1100_Boot_Kit", "Infineon:xmc:XMC1100_XMC2GO", "Infineon:xmc:XMC1300_Boot_Kit", "Infineon:xmc:XMC4200_Platform2GO", "Infineon:xmc:XMC4400_Platform2GO", "Infineon:xmc:XMC4700_Relax_Kit", "Infineon:xmc:XMC1400_XMC2GO", "Infineon:xmc:XMC1400_Arduino_Kit" ] }' 
-elif os == "macos-latest":
-    matrix = '{ "fqbn": [ ] }'
-else:
-    print("Unknown OS: " + os)
-    sys.exit(1)
+# if os == "ubuntu-latest":
+#     matrix = '{ "fqbn": [ "Infineon:xmc:XMC1100_Boot_Kit", "Infineon:xmc:XMC1100_XMC2GO", "Infineon:xmc:XMC1300_Boot_Kit", "Infineon:xmc:XMC4200_Platform2GO", "Infineon:xmc:XMC4400_Platform2GO", "Infineon:xmc:XMC4700_Relax_Kit", "Infineon:xmc:XMC1400_XMC2GO", "Infineon:xmc:XMC1400_Arduino_Kit" ], "example": ["libraries/LED/examples/SimpleLED/SimpleLED.ino"] }' 
+# elif os == "windows-latest":
+#     matrix = '{ "fqbn": [ "Infineon:xmc:XMC1100_Boot_Kit", "Infineon:xmc:XMC1100_XMC2GO", "Infineon:xmc:XMC1300_Boot_Kit", "Infineon:xmc:XMC4200_Platform2GO", "Infineon:xmc:XMC4400_Platform2GO", "Infineon:xmc:XMC4700_Relax_Kit", "Infineon:xmc:XMC1400_XMC2GO", "Infineon:xmc:XMC1400_Arduino_Kit" ], "example": ["libraries/LED/examples/SimpleLED/SimpleLED.ino"] }' 
+# elif os == "macos-latest":
+#     matrix = '{ "fqbn": [ ] }'
+# else:
+#     print("Unknown OS: " + os)
+#     sys.exit(1)
 
-#matrix = '{ "os": [ "ubuntu-latest", "windows-latest" ], "fqbn": [ "Infineon:xmc:XMC1100_Boot_Kit", "Infineon:xmc:XMC1100_XMC2GO", "Infineon:xmc:XMC1300_Boot_Kit", "Infineon:xmc:XMC4200_Platform2GO", "Infineon:xmc:XMC4400_Platform2GO", "Infineon:xmc:XMC4700_Relax_Kit", "Infineon:xmc:XMC1400_XMC2GO", "Infineon:xmc:XMC1400_Arduino_Kit" ] }' 
+matrix = '{ "os": [ "ubuntu-latest", "windows-latest" ], "fqbn": [ "Infineon:xmc:XMC1100_Boot_Kit", "Infineon:xmc:XMC1100_XMC2GO", "Infineon:xmc:XMC1300_Boot_Kit", "Infineon:xmc:XMC4200_Platform2GO", "Infineon:xmc:XMC4400_Platform2GO", "Infineon:xmc:XMC4700_Relax_Kit", "Infineon:xmc:XMC1400_XMC2GO", "Infineon:xmc:XMC1400_Arduino_Kit" ], "example": ["libraries/LED/examples/SimpleLED/SimpleLED.ino"] }' 
 print(matrix)
