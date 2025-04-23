@@ -8,4 +8,5 @@ jobs:
     uses: Infineon/arduino-devops/.github/workflows/compile-examples.yml@compile-example-os-board-jobs
     with:
       ci-matrix-file-json: ci-build-matrix.json 
+      os-list: 'ubuntu-latest, windows-latest'
     secrets: inherit
