@@ -1,4 +1,4 @@
-name: Compile examples
+name: Compile examples 0
 
 on:
   push:
