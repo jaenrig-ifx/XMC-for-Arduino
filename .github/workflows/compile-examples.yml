@@ -1,4 +1,4 @@
-name: Compile examples 0123
+name: Compile examples
 
 on:
   push:
@@ -7,6 +7,5 @@ jobs:
   compile-examples:
     uses: Infineon/arduino-devops/.github/workflows/compile-examples.yml@compile-example-os-board-matrix
     with:
-      ci-matrix-file-json: ci-build-matrix.json 
       os-list: 'ubuntu-latest, windows-latest'
     secrets: inherit
